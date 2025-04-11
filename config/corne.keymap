@@ -62,7 +62,7 @@
 &trans  &none                      &none                      &none                      &kp F11                    &kp F12                       &kp HOME      &kp END       &kp PAGE_UP   &kp PAGE_DOWN  &none       &trans
 &trans  &number_and_f F1 NUMBER_1  &number_and_f F2 NUMBER_2  &number_and_f F3 NUMBER_3  &number_and_f F4 NUMBER_4  &number_and_f F5 N5           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT      &none       &none
 &trans  &number_and_f F6 NUMBER_6  &number_and_f F7 N7        &number_and_f F8 N8        &number_and_f F9 N9        &number_and_f F10 NUMBER_0    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR  &trans
-                                                              &trans                     &trans                     &my_mt LEFT_ALT ENTER         &trans        &trans        &trans
+                                                              &trans                     &trans                     &trans                        &trans        &trans        &trans
             >;
         };
 
