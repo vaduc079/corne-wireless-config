@@ -32,6 +32,28 @@
         };
     };
 
+    behaviors {
+        number_and_f: number_and_f {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NUMBER_AND_F";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+        };
+
+        my_mt: my_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MY_MT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            flavor = "balanced";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -44,10 +66,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB              &kp Q  &kp W  &kp E     &kp R  &kp T                              &kp Y              &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&mt CAPSLOCK ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G                              &kp H              &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT            &kp Z  &kp X  &kp C     &kp V  &kp B                              &kp N              &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                                   &kp LGUI  &mo 1  &mt LS(LA(LC(LG(SPACE)))) ENTER    &mt RA(RET) SPACE  &mo 2  &kp RALT
+&kp TAB                 &kp Q  &kp W  &kp E     &kp R  &kp T                                 &kp Y                 &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&my_mt CAPSLOCK ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G                                 &kp H                 &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT               &kp Z  &kp X  &kp C     &kp V  &kp B                                 &kp N                 &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                                      &kp LGUI  &mo 1  &my_mt LS(LA(LC(LG(SPACE)))) ENTER    &my_mt RA(RET) SPACE  &mo 2  &kp RALT
             >;
         };
 
@@ -60,10 +82,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &trans           &trans           &trans           &trans           &trans                &kp HOME      &kp END       &kp PAGE_UP   &kp PAGE_DOWN  &trans      &trans
-&trans  &mt F1 NUMBER_1  &mt F2 NUMBER_2  &mt F3 NUMBER_3  &mt F4 NUMBER_4  &mt F5 N5             &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT      &trans      &none
-&trans  &mt F6 NUMBER_6  &mt F7 N7        &mt F8 N8        &mt F9 N9        &mt F10 NUMBER_0      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR  &trans
-                                          &trans           &trans           &mt LEFT_ALT SPACE    &trans        &trans        &trans
+&trans  &none                      &none                      &none                      &kp F11                    &kp F12                       &kp HOME      &kp END       &kp PAGE_UP   &kp PAGE_DOWN  &none       &trans
+&trans  &number_and_f F1 NUMBER_1  &number_and_f F2 NUMBER_2  &number_and_f F3 NUMBER_3  &number_and_f F4 NUMBER_4  &number_and_f F5 N5           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT      &none       &none
+&trans  &number_and_f F6 NUMBER_6  &number_and_f F7 N7        &number_and_f F8 N8        &number_and_f F9 N9        &number_and_f F10 NUMBER_0    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR  &trans
+                                                              &trans                     &trans                     &my_mt LEFT_ALT SPACE         &trans        &trans        &trans
             >;
         };
 
