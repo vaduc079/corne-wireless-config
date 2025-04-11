@@ -76,7 +76,7 @@
             display-name = "Raise";
             bindings = <
 &trans  &kp GRAVE  &kp TILDE    &kp BACKSLASH  &kp PIPE              &kp COLON                &kp LBKT   &kp RBKT   &kp LEFT_BRACE        &kp RIGHT_BRACE       &kp LG(GRAVE)  &trans
-&trans  &kp EXCL   &kp AT_SIGN  &kp HASH       &kp DLLR              &kp PERCENT              &kp MINUS  &kp PLUS   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(GRAVE)  &none
+&trans  &kp EXCL   &kp AT_SIGN  &kp HASH       &kp DLLR              &kp PERCENT              &kp MINUS  &kp PLUS   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(GRAVE)  &kp LC(SPACE)
 &trans  &kp CARET  &kp AMPS     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp UNDER  &kp EQUAL  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE     &kp LG(LA(Q))
                                 &trans         &trans                &trans                   &trans     &trans     &trans
             >;
