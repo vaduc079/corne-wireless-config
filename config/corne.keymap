@@ -10,9 +10,9 @@
 
 / {
     behaviors {
-        number_and_f: number_and_f {
+        mt_tap: mt_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "NUMBER_AND_F";
+            label = "MT_TAP";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -20,9 +20,9 @@
             tapping-term-ms = <300>;
         };
 
-        my_mt: my_mt {
+        mt_bal: mt_bal {
             compatible = "zmk,behavior-hold-tap";
-            label = "MY_MT";
+            label = "MT_BAL";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -43,10 +43,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB                 &kp Q  &kp W  &kp E     &kp R  &kp T                                &kp Y                   &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&my_mt CAPSLOCK ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G                                &kp H                   &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT               &kp Z  &kp X  &kp C     &kp V  &kp B                                &kp N                   &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
-                                      &kp LGUI  &mo 1  &my_mt LS(LA(LC(LEFT_GUI))) ENTER    &my_mt RIGHT_ALT SPACE  &mo 2  &kp RCTRL
+&kp TAB                  &kp Q  &kp W  &kp E     &kp R  &kp T                                 &kp Y                    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&mt_bal CAPSLOCK ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G                                 &kp H                    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT                &kp Z  &kp X  &kp C     &kp V  &kp B                                 &kp N                    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RSHIFT
+                                       &kp LGUI  &mo 1  &mt_bal LS(LA(LC(LEFT_GUI))) ENTER    &mt_bal RIGHT_ALT SPACE  &mo 2  &kp RCTRL
             >;
         };
 
@@ -59,10 +59,10 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp F11                    &kp F12                    &none                      &none                      &kp LG(LS(NUMBER_5))          &kp RA(LEFT)  &kp HOME      &kp END       &kp RA(RIGHT)  &kp PAGE_UP    &trans
-&trans  &number_and_f F1 NUMBER_1  &number_and_f F2 NUMBER_2  &number_and_f F3 NUMBER_3  &number_and_f F4 NUMBER_4  &number_and_f F5 N5           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT      &kp PAGE_DOWN  &none
-&trans  &number_and_f F6 NUMBER_6  &number_and_f F7 N7        &number_and_f F8 N8        &number_and_f F9 N9        &number_and_f F10 NUMBER_0    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
-                                                              &trans                     &trans                     &trans                        &trans        &trans        &trans
+&trans  &kp F11              &kp F12              &none                &none                &kp LG(LS(NUMBER_5))    &kp RA(LEFT)  &kp HOME      &kp END       &kp RA(RIGHT)  &kp PAGE_UP    &trans
+&trans  &mt_tap F1 NUMBER_1  &mt_tap F2 NUMBER_2  &mt_tap F3 NUMBER_3  &mt_tap F4 NUMBER_4  &mt_tap F5 N5           &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT      &kp PAGE_DOWN  &none
+&trans  &mt_tap F6 NUMBER_6  &mt_tap F7 N7        &mt_tap F8 N8        &mt_tap F9 N9        &mt_tap F10 NUMBER_0    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR
+                                                  &trans               &trans               &trans                  &trans        &trans        &trans
             >;
         };
 
@@ -75,9 +75,9 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp GRAVE  &kp TILDE    &kp BACKSLASH  &kp PIPE              &kp COLON                &kp LBKT   &kp RBKT   &kp LEFT_BRACE        &kp RIGHT_BRACE       &kp LG(GRAVE)  &trans
-&trans  &kp EXCL   &kp AT_SIGN  &kp HASH       &kp DLLR              &kp PERCENT              &kp MINUS  &kp PLUS   &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp LC(GRAVE)  &kp LC(SPACE)
-&trans  &kp CARET  &kp AMPS     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp UNDER  &kp EQUAL  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP       &kp K_MUTE     &kp LG(LA(Q))
+&trans  &kp GRAVE  &kp TILDE    &kp BACKSLASH  &kp PIPE              &kp COLON                &kp LBKT   &kp RBKT   &kp LEFT_BRACE                    &kp RIGHT_BRACE             &kp LG(GRAVE)                &trans
+&trans  &kp EXCL   &kp AT_SIGN  &kp HASH       &kp DLLR              &kp PERCENT              &kp MINUS  &kp PLUS   &kp C_BRIGHTNESS_DEC              &kp C_BRIGHTNESS_INC        &kp LC(GRAVE)                &kp LC(SPACE)
+&trans  &kp CARET  &kp AMPS     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp UNDER  &kp EQUAL  &mt_tap C_PREVIOUS C_VOLUME_DOWN  &mt_tap C_NEXT C_VOLUME_UP  &mt_tap C_PLAY_PAUSE C_MUTE  &kp LG(LA(Q))
                                 &trans         &trans                &trans                   &trans     &trans     &trans
             >;
         };
