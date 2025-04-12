@@ -2,4 +2,4 @@ My 6 column Corne ZMK config.
 
 ## Keymap
 
-![my_keymap (2)](https://github.com/user-attachments/assets/6c533aa8-2e5b-4823-b70e-0d6225ec5afe)
+![corne-zmk-keymap](https://github.com/user-attachments/assets/fdb4a6f3-ff5d-4ebf-b270-d7e5ab602407)
