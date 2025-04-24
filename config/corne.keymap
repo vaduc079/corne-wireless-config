@@ -60,7 +60,7 @@
             display-name = "Lower";
             bindings = <
 &trans  &kp F11              &kp F12              &kp C_PREVIOUS       &kp C_PP             &kp C_NEXT              &kp RA(LEFT)  &kp HOME  &kp END  &kp RA(RIGHT)  &kp PAGE_UP    &trans
-&trans  &mt_tap F1 NUMBER_1  &mt_tap F2 NUMBER_2  &mt_tap F3 NUMBER_3  &mt_tap F4 NUMBER_4  &mt_tap F5 N5           &kp LEFT      &kp DOWN  &kp UP   &kp RIGHT      &kp PAGE_DOWN  &kp LG(LS(NUMBER_5))
+&trans  &mt_tap F1 NUMBER_1  &mt_tap F2 NUMBER_2  &mt_tap F3 NUMBER_3  &mt_tap F4 NUMBER_4  &mt_tap F5 N5           &kp LEFT      &kp DOWN  &kp UP   &kp RIGHT      &kp PAGE_DOWN  &kp LG(LS(NUMBER_3))
 &trans  &mt_tap F6 NUMBER_6  &mt_tap F7 N7        &mt_tap F8 N8        &mt_tap F9 N9        &mt_tap F10 NUMBER_0    &none         &none     &trans   &trans         &trans         &mo 3
                                                   &trans               &trans               &trans                  &trans        &trans    &trans
             >;
