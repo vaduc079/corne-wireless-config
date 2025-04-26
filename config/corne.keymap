@@ -60,7 +60,7 @@
 
             display-name = "Lower";
             bindings = <
-&trans  &kp F11              &kp F12              &none                &none                &kp LG(LS(NUMBER_3))    &kp RA(LEFT)  &kp HOME  &kp END  &kp RA(RIGHT)  &kp PAGE_UP    &trans
+&trans  &kp F11              &kp F12              &kp LG(GRAVE)        &kp RC(GRAVE)        &kp LG(LS(NUMBER_3))    &kp RA(LEFT)  &kp HOME  &kp END  &kp RA(RIGHT)  &kp PAGE_UP    &trans
 &trans  &mt_tap F1 NUMBER_1  &mt_tap F2 NUMBER_2  &mt_tap F3 NUMBER_3  &mt_tap F4 NUMBER_4  &mt_tap F5 N5           &kp LEFT      &kp DOWN  &kp UP   &kp RIGHT      &kp PAGE_DOWN  &none
 &mo 3   &mt_tap F6 NUMBER_6  &mt_tap F7 N7        &mt_tap F8 N8        &mt_tap F9 N9        &mt_tap F10 NUMBER_0    &none         &none     &trans   &trans         &trans         &trans
                                                   &trans               &trans               &trans                  &trans        &trans    &trans
@@ -76,9 +76,9 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp GRAVE  &kp TILDE    &kp BACKSLASH  &kp PIPE              &kp COLON                &kp LBKT   &kp RBKT   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp LG(GRAVE)  &trans
-&trans  &kp EXCL   &kp AT_SIGN  &kp HASH       &kp DLLR              &kp PERCENT              &kp MINUS  &kp PLUS   &none           &none            &kp LC(GRAVE)  &kp LC(SPACE)
-&trans  &kp CARET  &kp AMPS     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp UNDER  &kp EQUAL  &trans          &trans           &trans         &kp LG(LA(Q))
+&trans  &kp GRAVE  &kp TILDE    &kp BACKSLASH  &kp PIPE              &kp COLON                &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &none    &trans
+&trans  &kp EXCL   &kp AT_SIGN  &kp HASH       &kp DLLR              &kp PERCENT              &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp DQT  &kp LC(SPACE)
+&trans  &kp CARET  &kp AMPS     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LT     &kp GT     &trans    &trans    &trans   &kp LG(LA(Q))
                                 &trans         &trans                &trans                   &trans     &trans     &trans
             >;
         };
