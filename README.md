@@ -1,4 +1,6 @@
-My 6 column Corne ZMK config.
+# My 6 column Corne ZMK config.
+
+[How to install the Firmware](https://zmk.dev/docs/user-setup#installing-the-firmware)
 
 ## Keymap
 
