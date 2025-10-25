@@ -78,7 +78,7 @@
             bindings = <
 &trans  &kp GRAVE  &kp TILDE    &kp BACKSLASH  &kp PIPE              &kp COLON                &kp MINUS  &kp PLUS   &kp LBKT  &kp RBKT  &kp SQT  &trans
 &trans  &kp EXCL   &kp AT_SIGN  &kp HASH       &kp DLLR              &kp PERCENT              &kp UNDER  &kp EQUAL  &kp LBRC  &kp RBRC  &kp DQT  &kp LC(SPACE)
-&trans  &kp CARET  &kp AMPS     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LT     &kp GT     &trans    &trans    &trans   &kp LG(LA(Q))
+&trans  &kp CARET  &kp AMPS     &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp LT     &kp GT     &trans    &trans    &trans   &kp LG(LC(Q))
                                 &trans         &trans                &trans                   &trans     &trans     &trans
             >;
         };
