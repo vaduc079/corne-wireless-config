@@ -4,5 +4,4 @@
 
 ## Keymap
 
-<img width="900" height="1709" alt="my_keymap" src="https://github.com/user-attachments/assets/1d1172c7-5f6a-4a4a-b3e9-c4557b85a9d2" />
-
+<img width="900" height="1709" alt="my_keymap" src="https://github.com/user-attachments/assets/20e458a5-fff2-47a7-9d19-9b67449dfce4" />
