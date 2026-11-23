@@ -87,14 +87,14 @@
         default_layer {
             // ----------------------------------------------------------------------------------------
             // |  TAB  |  Q   |  W   |  E   |  R   |  T  |   |  Y  |  U   |  I   |  O   |  P   | BKSP |
-            // |ESC/CAP|A/CTL |S/ALT |D/CMD |F/SFT |  G  |   |  H  |J/SFT |K/CMD |L/ALT |;/CTL |  '   |
+            // |ESC/CAP|  A   |S/CTL |D/ALT |F/CMD |  G  |   |  H  |J/CMD |K/ALT |L/CTL |  ;   |  '   |
             // | SHFT  |  Z   |  X   |  C   |  V   |  B  |   |  N  |  M   |  ,   |  .   |  /   | SHFT |
             //                       | CMD  | NAV  |ENT/HYP|  |SPC/ALT| NUM | SYM  |
 
             display-name = "Base";
             bindings = <
 &kp TAB                  &kp Q            &kp W           &kp E           &kp R            &kp T                                 &kp Y                    &kp U            &kp I           &kp O           &kp P               &kp BSPC
-&mt_bal CAPSLOCK ESCAPE  &hml LCTRL A     &hml LALT S     &hml LGUI D     &hml LSHFT F     &kp G                                 &kp H                    &hmr RSHFT J     &hmr RGUI K     &hmr RALT L     &hmr RCTRL SEMI     &kp SQT
+&mt_bal CAPSLOCK ESCAPE  &kp A            &hml LCTRL S    &hml LALT D     &hml LGUI F      &kp G                                 &kp H                    &hmr RGUI J      &hmr RALT K     &hmr RCTRL L    &kp SEMI     &kp SQT
 &kp LSHFT                &kp Z            &kp X           &kp C           &kp V            &kp B                                 &kp N                    &kp M            &kp COMMA       &kp DOT         &kp FSLH            &kp RSHIFT
                                                           &kp LGUI        &mo NAV          &mt_bal LS(LA(LC(LEFT_GUI))) ENTER    &mt_bal RIGHT_ALT SPACE  &mo NUM          &mo SYM
             >;
@@ -104,13 +104,13 @@
             // Held by the left thumb: mods on the left hand, navigation on the right.
             // ----------------------------------------------------------------------------------------
             // |       | F11  | F12  | CMD` | CTL` |SC-3 |   | A-← | HOME | END  | A-→  | PGUP |      |
-            // |       | CTRL | ALT  | CMD  | SHFT |     |   |  ←  |  ↓   |  ↑   |  →   | PGDN |      |
+            // |       | SHFT | CTRL | ALT  | CMD  |     |   |  ←  |  ↓   |  ↑   |  →   | PGDN |      |
             // | MISC  |      |      |      |      |     |   |     |      |      |      |      |      |
 
             display-name = "Nav";
             bindings = <
 &trans     &kp F11    &kp F12   &kp LG(GRAVE)  &kp RC(GRAVE)  &kp LG(LS(NUMBER_3))    &kp RA(LEFT)  &kp HOME  &kp END  &kp RA(RIGHT)  &kp PAGE_UP    &trans
-&trans     &kp LCTRL  &kp LALT  &kp LGUI       &kp LSHFT      &none                   &kp LEFT      &kp DOWN  &kp UP   &kp RIGHT      &kp PAGE_DOWN  &none
+&trans     &kp LSHFT  &kp LCTRL &kp LALT       &kp LGUI       &none                   &kp LEFT      &kp DOWN  &kp UP   &kp RIGHT      &kp PAGE_DOWN  &none
 &mo MISC   &none      &none     &none          &none          &none                   &none         &none     &trans   &trans         &trans         &trans
                                 &trans         &trans         &trans                  &trans        &trans    &trans
             >;
@@ -121,13 +121,13 @@
             // Holding a number key sends the matching F-key, as before.
             // ----------------------------------------------------------------------------------------
             // |       |  -   |  =   |  [   |  ]   |  \  |   |     |      |      |      |      |      |
-            // |   `   | 1/F1 | 2/F2 | 3/F3 | 4/F4 |5/F5 |   |     | SHFT | CMD  | ALT  | CTRL |      |
+            // |   `   | 1/F1 | 2/F2 | 3/F3 | 4/F4 |5/F5 |   |     | CMD  | ALT  | CTRL | SHFT |      |
             // |   '   | 6/F6 | 7/F7 | 8/F8 | 9/F9 |0/F10|   |     |      |      |      |      |      |
 
             display-name = "Num";
             bindings = <
 &trans      &kp MINUS            &kp EQUAL            &kp LBKT             &kp RBKT             &kp BSLH                &none  &none      &none      &none      &none      &trans
-&kp GRAVE   &mt_tap F1 NUMBER_1  &mt_tap F2 NUMBER_2  &mt_tap F3 NUMBER_3  &mt_tap F4 NUMBER_4  &mt_tap F5 NUMBER_5     &none  &kp RSHFT  &kp RGUI   &kp RALT   &kp RCTRL  &none
+&kp GRAVE   &mt_tap F1 NUMBER_1  &mt_tap F2 NUMBER_2  &mt_tap F3 NUMBER_3  &mt_tap F4 NUMBER_4  &mt_tap F5 NUMBER_5     &none  &kp RGUI   &kp RALT   &kp RCTRL  &kp RSHFT  &none
 &kp SQT     &mt_tap F6 NUMBER_6  &mt_tap F7 NUMBER_7  &mt_tap F8 NUMBER_8  &mt_tap F9 NUMBER_9  &mt_tap F10 NUMBER_0    &none  &none      &none      &none      &none      &trans
                                                       &trans               &trans               &trans                  &trans &trans     &trans
             >;
@@ -137,14 +137,14 @@
             // Held by the right outer thumb: shifted symbols on the left, mods on the right.
             // ----------------------------------------------------------------------------------------
             // |       |  _   |  +   |  {   |  }   |  |  |   |     |      |      |      |      |      |
-            // |   ~   |  !   |  @   |  #   |  $   |  %  |   |     | SHFT | CMD  | ALT  | CTRL |CTL-SP|
+            // |   ~   |  !   |  @   |  #   |  $   |  %  |   |     | CMD  | ALT  | CTRL | SHFT |CTL-SP|
             // |   "   |  ^   |  &   |  *   |  (   |  )  |   |     |      |      |      |      |CMD-CTL-Q|
             //                       |  <   |  >   |  :  |   |     |      |      |
 
             display-name = "Sym";
             bindings = <
 &trans      &kp UNDER  &kp PLUS     &kp LBRC      &kp RBRC  &kp PIPE       &none   &none      &none     &none     &none      &trans
-&kp TILDE   &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DLLR  &kp PERCENT    &none   &kp RSHFT  &kp RGUI  &kp RALT  &kp RCTRL  &kp LC(SPACE)
+&kp TILDE   &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DLLR  &kp PERCENT    &none   &kp RGUI   &kp RALT  &kp RCTRL &kp RSHFT  &kp LC(SPACE)
 &kp DQT     &kp CARET  &kp AMPS     &kp ASTERISK  &kp LPAR  &kp RPAR       &none   &none      &none     &none     &none      &kp LG(LC(Q))
                                     &kp LT        &kp GT    &kp COLON      &trans  &trans     &trans
             >;
