@@ -87,14 +87,14 @@
         default_layer {
             // ----------------------------------------------------------------------------------------
             // |  TAB  |  Q   |  W   |  E   |  R   |  T  |   |  Y  |  U   |  I   |  O   |  P   | BKSP |
-            // |ESC/CAP|  A   |  S   |D/CTL |F/CMD |  G  |   |  H  |J/CMD |K/CTL |  L   |  ;   |  '   |
+            // |  ESC  |  A   |  S   |D/CTL |F/CMD |  G  |   |  H  |J/CMD |K/CTL |  L   |  ;   |  '   |
             // | SHFT  |  Z   |  X   |  C   |  V   |  B  |   |  N  |  M   |  ,   |  .   |  /   | SHFT |
             //                       | CMD  | NAV  |ENT/HYP|  |SPC/ALT| NUM | SYM  |
 
             display-name = "Base";
             bindings = <
 &kp TAB                  &kp Q            &kp W           &kp E           &kp R            &kp T                                 &kp Y                    &kp U            &kp I           &kp O           &kp P               &kp BSPC
-&mt_bal CAPSLOCK ESCAPE  &kp A            &kp S           &hml LCTRL D    &hml LGUI F      &kp G                                 &kp H                    &hmr RGUI J      &hmr RCTRL K    &kp L           &kp SEMI     &kp SQT
+&kp ESCAPE              &kp A            &kp S           &hml LCTRL D    &hml LGUI F      &kp G                                 &kp H                    &hmr RGUI J      &hmr RCTRL K    &kp L           &kp SEMI     &kp SQT
 &kp LSHFT                &kp Z            &kp X           &kp C           &kp V            &kp B                                 &kp N                    &kp M            &kp COMMA       &kp DOT         &kp FSLH            &kp RSHIFT
                                                           &kp LGUI        &mo NAV          &mt_bal LS(LA(LC(LEFT_GUI))) ENTER    &mt_bal RIGHT_ALT SPACE  &mo NUM          &mo SYM
             >;
@@ -138,14 +138,14 @@
             // ----------------------------------------------------------------------------------------
             // |       |  _   |  +   |  {   |  }   |  |  |   |  <  |  >   |      |      |      |      |
             // |       |  !   |  @   |  #   |  $   |  %  |   |     | CMD  | CTRL | ALT  | SHFT |      |
-            // |       |  ^   |  &   |  *   |  (   |  )  |   |     |      |      |      |      |      |
+            // |       |  ^   |  &   |  *   |  (   |  )  |   |     |      |      |      |      | CAPS |
             //                       |  <   |  >   |  :  |   |     |      |      |
 
             display-name = "Sym";
             bindings = <
 &trans      &kp UNDER  &kp PLUS     &kp LBRC      &kp RBRC  &kp PIPE       &kp LT  &kp GT     &none     &none     &none      &trans
 &trans      &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DLLR  &kp PERCENT    &none   &kp RGUI   &kp RCTRL &kp RALT  &kp RSHFT  &none
-&trans      &kp CARET  &kp AMPS     &kp ASTERISK  &kp LPAR  &kp RPAR       &none   &none      &none     &none     &none      &trans
+&trans      &kp CARET  &kp AMPS     &kp ASTERISK  &kp LPAR  &kp RPAR       &none   &none      &none     &none     &none      &kp CAPSLOCK
                                     &kp LT        &kp GT    &kp COLON      &trans  &trans     &trans
             >;
         };
