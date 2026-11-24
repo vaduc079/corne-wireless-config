@@ -84,15 +84,15 @@
             // Held by the right thumb: numbers and unshifted symbols on the left, mods on the right.
             // Holding a number key sends the matching F-key, as before.
             // ----------------------------------------------------------------------------------------
-            // |       |  -   |  =   |  [   |  ]   |  \  |   |  :  |  `   |  ~   |      |      |      |
+            // |       |  -   |  =   |  [   |  ]   |  \  |   |  `  |  ~   |      |      |      |      |
             // |       | 1/F1 | 2/F2 | 3/F3 | 4/F4 |5/F5 |   |     | CMD  | CTRL | ALT  | SHFT |CTL-SP|
-            // |       | 6/F6 | 7/F7 | 8/F8 | 9/F9 |0/F10|   |     |      |      |      |      |CMD-CTL-Q|
+            // |       | 6/F6 | 7/F7 | 8/F8 | 9/F9 |0/F10|   |     |      |  ▽   |  ▽   |  ▽   |CMD-CTL-Q|
 
             display-name = "Num";
             bindings = <
-&trans      &kp MINUS            &kp EQUAL            &kp LBKT             &kp RBKT             &kp BSLH                &kp COLON  &kp GRAVE  &kp TILDE  &none      &none      &trans
+&trans      &kp MINUS            &kp EQUAL            &kp LBKT             &kp RBKT             &kp BSLH                &kp GRAVE  &kp TILDE  &none      &none      &none      &trans
 &trans      &mt_tap F1 NUMBER_1  &mt_tap F2 NUMBER_2  &mt_tap F3 NUMBER_3  &mt_tap F4 NUMBER_4  &mt_tap F5 NUMBER_5     &none  &kp RGUI   &kp RCTRL  &kp RALT   &kp RSHFT  &kp LC(SPACE)
-&trans      &mt_tap F6 NUMBER_6  &mt_tap F7 NUMBER_7  &mt_tap F8 NUMBER_8  &mt_tap F9 NUMBER_9  &mt_tap F10 NUMBER_0    &none  &none      &none      &none      &none      &kp LG(LC(Q))
+&trans      &mt_tap F6 NUMBER_6  &mt_tap F7 NUMBER_7  &mt_tap F8 NUMBER_8  &mt_tap F9 NUMBER_9  &mt_tap F10 NUMBER_0    &none  &none      &trans     &trans     &trans     &kp LG(LC(Q))
                                                       &trans               &trans               &trans                  &trans &trans     &trans
             >;
         };
@@ -100,16 +100,16 @@
         sym_layer {
             // Held by the right outer thumb: shifted symbols on the left, mods on the right.
             // ----------------------------------------------------------------------------------------
-            // |       |  _   |  +   |  {   |  }   |  |  |   |  <  |  >   |      |      |      |      |
+            // |       |  _   |  +   |  {   |  }   |  |  |   |     |      |      |      |      |      |
             // |       |  !   |  @   |  #   |  $   |  %  |   |     | CMD  | CTRL | ALT  | SHFT |      |
-            // |       |  ^   |  &   |  *   |  (   |  )  |   |     |      |      |      |      | CAPS |
+            // |       |  ^   |  &   |  *   |  (   |  )  |   |     |      |  ▽   |  ▽   |  ▽   | CAPS |
             //                       |  <   |  >   |  :  |   |     |      |      |
 
             display-name = "Sym";
             bindings = <
-&trans      &kp UNDER  &kp PLUS     &kp LBRC      &kp RBRC  &kp PIPE       &kp LT  &kp GT     &none     &none     &none      &trans
+&trans      &kp UNDER  &kp PLUS     &kp LBRC      &kp RBRC  &kp PIPE       &none   &none      &none     &none     &none      &trans
 &trans      &kp EXCL   &kp AT_SIGN  &kp HASH      &kp DLLR  &kp PERCENT    &none   &kp RGUI   &kp RCTRL &kp RALT  &kp RSHFT  &none
-&trans      &kp CARET  &kp AMPS     &kp ASTERISK  &kp LPAR  &kp RPAR       &none   &none      &none     &none     &none      &kp CAPSLOCK
+&trans      &kp CARET  &kp AMPS     &kp ASTERISK  &kp LPAR  &kp RPAR       &none   &none      &trans    &trans    &trans     &kp CAPSLOCK
                                     &kp LT        &kp GT    &kp COLON      &trans  &trans     &trans
             >;
         };
